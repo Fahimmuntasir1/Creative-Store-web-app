@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import "./LogIn.css";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase.init";
@@ -48,7 +48,7 @@ const LogIn = () => {
   };
   const handleLogIn = (e) => {
     e.preventDefault();
-    // signInWithEmailAndPassword(email, password);
+    signInWithEmailAndPassword(userInfo.email, userInfo.password);
   };
 
   return (
@@ -77,7 +77,7 @@ const LogIn = () => {
           <input type="submit" value="Sign Up" />
         </div>
 
-        {/* {error && <p>{error}</p>} */}
+        {hookError && <p className="error">{hookError?.message}</p>}
         <p className="text-center">
           Already user?{" "}
           <span role="button" className="text-danger">
