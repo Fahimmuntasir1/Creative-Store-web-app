@@ -3,42 +3,42 @@
     "id": 1,
     "name": "EDITORIAL PHOTOGRAPHY",
     "price": "$300",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "Editorial photography refers to images that run alongside text in publications to help tell a story or educate readers.",
     "img": "https://i.ibb.co/3FpN6yB/editorial.jpg"
   },
   {
     "id": 2,
     "name": "ADVERTISING PHOTOGRAPHY",
     "price": "$100",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "Advertising photography is flashier. It's the kind of photography you might be more likely to see spread across a few pages in a magazine. Advertising photos are more about capturing an idea or a feeling.",
     "img": "https://i.ibb.co/PFhHJMW/advertisingjpg.jpg"
   },
   {
     "id": 3,
     "name": "PORTRAIT PHOTOGRAPHY",
     "price": "$250",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "Portrait photography, or portraiture, is a type of photography aimed toward capturing the personality of a person or group of people by using effective lighting, backdrops, and poses.",
     "img": "https://i.ibb.co/8Dj6FDm/portait.jpg"
   },
   {
     "id": 4,
     "name": "FOOD & DRINK PHOTOGRAPHY",
     "price": "$280",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "At Wonderful Machine we define food photography as depicting it as “a product or an experience, including showing it being grown, prepared, served, consumed.” Food & drink photography can be editorial (like cookbooks and magazines).",
     "img": "https://i.ibb.co/whjfmWy/food-and-drink.jpg"
   },
   {
     "id": 5,
     "name": "EVENT PHOTOGRAPHY",
     "price": "$300",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "Event photography is the professional art of snapping high-quality images during a wide variety of important occasions, from personal events like weddings or birthday parties to large public gatherings like corporate events, galas, award ceremonies, and music festivals.",
     "img": "https://i.ibb.co/ZNjXCtq/event.jpg"
   },
   {
     "id": 6,
     "name": "FILMING AND EDITING",
     "price": "$500",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+    "description": "Video editing services can include cutting segments (trimming), re-sequencing clips, and adding transitions & other Special Effects. Linear video editing uses videotape and is edited in a very linear way.",
     "img": "https://i.ibb.co/WfMhy4D/editing.jpg"
   }
 ]
