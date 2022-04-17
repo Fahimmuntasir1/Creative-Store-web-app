@@ -6,6 +6,8 @@ import Footer from "./Components/Pages/Sheared/Footer/Footer";
 import Services from "./Components/Pages/Services/Services";
 import LogIn from "./Components/Pages//Register-LogIn/LogIn/LogIn";
 import Register from "./Components/Pages//Register-LogIn/Register/Register";
+import CheckOut from "./Components/Pages/CheckOut/CheckOut";
+import RequireAuth from "./Components/Auth/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -17,6 +19,14 @@ function App() {
         <Route path="/login" element={<LogIn></LogIn>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <CheckOut></CheckOut>
+            </RequireAuth>
+          }
+        ></Route>
       </Routes>
       <Footer></Footer>
     </div>
