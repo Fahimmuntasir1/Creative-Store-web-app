@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "EDITORIAL PHOTOGRAPHY",
+    "price": "$300",
+    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "img": "https://i.ibb.co/3FpN6yB/editorial.jpg"
+  },
+  {
+    "id": 2,
+    "name": "ADVERTISING PHOTOGRAPHY",
+    "price": "$100",
+    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "img": "https://i.ibb.co/PFhHJMW/advertisingjpg.jpg"
+  },
+  {
+    "id": 3,
+    "name": "PORTRAIT PHOTOGRAPHY",
+    "price": "$250",
+    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "img": "https://i.ibb.co/8Dj6FDm/portait.jpg"
+  },
+  {
+    "id": 4,
+    "name": "FOOD & DRINK PHOTOGRAPHY",
+    "price": "$280",
+    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "img": "https://i.ibb.co/whjfmWy/food-and-drink.jpg"
+  },
+  {
+    "id": 5,
+    "name": "EVENT PHOTOGRAPHY",
+    "price": "$300",
+    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "img": "https://i.ibb.co/ZNjXCtq/event.jpg"
+  },
+  {
+    "id": 6,
+    "name": "FILMING AND EDITING",
+    "price": "$500",
+    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+    "img": "https://i.ibb.co/WfMhy4D/editing.jpg"
+  }
+]

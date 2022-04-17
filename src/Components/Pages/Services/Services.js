@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
+import "./Services.css";
+import Service from "../Service/Service";
 
 const Services = () => {
   const [services, setServices] = useState([]);
-  console.log(services);
   useEffect(() => {
-    fetch("service.json")
+    fetch("product.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   return (
-    <div>
-      <h2>services{services.length}</h2>
+    <div id="services" className="services">
+      <h2 className="my-4 fs-1">Services</h2>
+      <div className="services-container row">
+        {services.map((service) => (
+          <Service key={service.id} services={service}></Service>
+        ))}
+      </div>
     </div>
   );
 };
