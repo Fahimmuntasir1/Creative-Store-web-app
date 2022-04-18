@@ -82,6 +82,7 @@ const LogIn = () => {
           placeholder="Email Address"
           required
         />
+        gellary
         {errors?.email && <p className="error">{errors.email}</p>}
         <input
           type="password"
@@ -101,7 +102,7 @@ const LogIn = () => {
         <p className="text-center">
           Already user?{" "}
           <Link to="/register" role="button" className="text-danger">
-            Sign Up
+            Log In
           </Link>
         </p>
         <p className="text-center">
