@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../../../firebase.init";
 import SocialLogIn from "../Social-LogIn/SocialLogIn";
@@ -7,6 +10,7 @@ import "./Register.css";
 
 const Register = () => {
   const [userInfo, setUserInfo] = useState({
+    name:"",
     email: "",
     password: "",
     confirmPassword: "",
@@ -18,12 +22,12 @@ const Register = () => {
   });
 
   const [createUserWithEmailAndPassword, user, loading, hookError] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updateProfile, updating, profileError] = useUpdateProfile(auth);
 
-    
-    const navigate = useNavigate();
-    const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const handleEmailChange = (e) => {
     const validEmail = /\S+@\S+\.\S+/.test(e.target.value);
@@ -66,12 +70,12 @@ const Register = () => {
       setUserInfo({ ...userInfo, confirmPassword: "" });
     }
   };
-  const handleLogIn = (e) => {
+  const handleLogIn = async (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+    await createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+    await updateProfile({ displayName:userInfo.name});
+          alert('Updated profile');
   };
-
-
 
   useEffect(() => {
     if (user) {
@@ -118,7 +122,7 @@ const Register = () => {
           </Link>
         </p>
       </form>
-      <SocialLogIn/>
+      <SocialLogIn />
     </div>
   );
 };
