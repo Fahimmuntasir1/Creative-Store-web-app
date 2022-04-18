@@ -7,6 +7,9 @@ import {
 import { auth } from "../../../../firebase.init";
 import SocialLogIn from "../Social-LogIn/SocialLogIn";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const LogIn = () => {
   const [userInfo, setUserInfo] = useState({
@@ -58,9 +61,13 @@ const LogIn = () => {
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
   };
 
-  const resetPassword = async() => {
-    await sendPasswordResetEmail(userInfo.email);
-          alert('Sent email');
+  const resetPassword = async () => {
+    if (userInfo.email) {
+      await sendPasswordResetEmail(userInfo.email);
+      toast("Sent email");
+    }else{
+      toast('Please enter a valid email for reset password')
+    }
   };
 
   return (
@@ -99,12 +106,18 @@ const LogIn = () => {
         </p>
         <p className="text-center">
           Forget Password??{" "}
-          <Link to='' onClick={resetPassword} role="button" className="text-danger">
+          <Link
+            to=""
+            onClick={resetPassword}
+            role="button"
+            className="text-danger"
+          >
             Reset Now
           </Link>
         </p>
       </form>
       <SocialLogIn></SocialLogIn>
+      <ToastContainer />
     </div>
   );
 };
