@@ -1,0 +1,30 @@
+.div-style {
+  border-bottom: 2px solid rgb(168, 168, 168);
+  width: 40%;
+  display: flex;
+  margin: auto;
+}
+.social-btn {
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 50px;
+  color: #000000;
+  background: #f2f2f2eb;
+}
+.social-btn:hover {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f3f3f3, #e0e0e0);
+  box-shadow: 5px 5px 8px #b3b3b3, -5px -5px 155px #ffffffe0;
+}
+.social-btn:active {
+  background: #f2f2f2eb;
+  box-shadow: none;
+}
+.social-buttons {
+  margin-top: 10px;
+}
+.social-buttons img {
+  width: 30px;
+}

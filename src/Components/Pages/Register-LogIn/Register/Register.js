@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../../../firebase.init";
+import SocialLogIn from "../Social-LogIn/SocialLogIn";
 import "./Register.css";
 
 const Register = () => {
@@ -112,11 +113,12 @@ const Register = () => {
         {hookError && <p className="error">{hookError?.message}</p>}
         <p className="text-center">
           Already user?{" "}
-          <span role="button" className="text-danger">
+          <Link to="/login" role="button" className="text-danger">
             Log In
-          </span>
+          </Link>
         </p>
       </form>
+      <SocialLogIn/>
     </div>
   );
 };

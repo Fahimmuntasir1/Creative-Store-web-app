@@ -2,8 +2,8 @@
   border-radius: 11px;
   background: #e0e0e0;
   box-shadow: 32px 32px 63px #b1b1b1, -32px -32px 63px #ffffff;
-  width: 30%;
-  height: 500px;
+  width: 500px;
+  /* height: 500px; */
   margin: auto;
 }
 
@@ -29,4 +29,10 @@
   color: black;
   background: #e0e0e0;
   box-shadow: inset 8px 8px 8px #cecece, inset -8px -8px 8px #f2f2f2;
+}
+
+@media only screen and (max-width: 480px) {
+  .signup-form {
+    width: 320px;
+  }
 }

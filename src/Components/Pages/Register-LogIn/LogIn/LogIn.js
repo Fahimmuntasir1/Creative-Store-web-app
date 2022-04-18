@@ -1,7 +1,9 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./LogIn.css";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase.init";
+import SocialLogIn from "../Social-LogIn/SocialLogIn";
+import { Link } from "react-router-dom";
 
 const LogIn = () => {
   const [userInfo, setUserInfo] = useState({
@@ -65,7 +67,7 @@ const LogIn = () => {
         />
         {errors?.email && <p className="error">{errors.email}</p>}
         <input
-          type="text"
+          type="password"
           name="password"
           onChange={handlePasswordChange}
           id="user-pass"
@@ -78,13 +80,15 @@ const LogIn = () => {
         </div>
 
         {hookError && <p className="error">{hookError?.message}</p>}
+
         <p className="text-center">
           Already user?{" "}
-          <span role="button" className="text-danger">
+          <Link to="/register" role="button" className="text-danger">
             Sign Up
-          </span>
+          </Link>
         </p>
       </form>
+      <SocialLogIn></SocialLogIn>
     </div>
   );
 };
