@@ -6,7 +6,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase.init";
 import SocialLogIn from "../Social-LogIn/SocialLogIn";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -26,6 +26,11 @@ const LogIn = () => {
     useSignInWithEmailAndPassword(auth);
 
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
 
   const handleEmailChange = (e) => {
     const validEmail = /\S+@\S+\.\S+/.test(e.target.value);
@@ -65,11 +70,13 @@ const LogIn = () => {
     if (userInfo.email) {
       await sendPasswordResetEmail(userInfo.email);
       toast("Sent email");
-    }else{
-      toast('Please enter a valid email for reset password')
+    } else {
+      toast("Please enter a valid email for reset password");
     }
   };
-
+  if (user) {
+    navigate(from, { replace: true });
+  }
   return (
     <div className="signup-form">
       <h2 className="text-center mt-2 p-2">Log In</h2>
@@ -82,7 +89,6 @@ const LogIn = () => {
           placeholder="Email Address"
           required
         />
-        gellary
         {errors?.email && <p className="error">{errors.email}</p>}
         <input
           type="password"
